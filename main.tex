@@ -45,46 +45,46 @@
 %\usepackage{lineno}
 
 \lstset{
-	basicstyle=\ttfamily,
-	frame=none,
-	breaklines=true,
-	numbers=left,
-	xleftmargin=2.5em,
-	framexleftmargin=0em,
-	emphstyle=\textbf,
-	float=t
-	%  ,escapeinside={/*}{*/}
-	,moredelim=[is][\bfseries]{(*}{*)}
+  basicstyle=\ttfamily,
+  frame=none,
+  breaklines=true,
+  numbers=left,
+  xleftmargin=2.5em,
+  framexleftmargin=0em,
+  emphstyle=\textbf,
+  float=t
+  %  ,escapeinside={/*}{*/}
+  ,moredelim=[is][\bfseries]{(*}{*)}
 }
 \lstdefinestyle{egx}{
-	basicstyle=\ttfamily\scriptsize,
-	emph={
-		rule, transform, template, parameters, Map, Sequence, :
-	},
-	commentstyle=\sffamily\textit,
-	comment=[l]{\#}
+  basicstyle=\ttfamily\scriptsize,
+  emph={
+    rule, transform, template, parameters, Map, Sequence, :
+  },
+  commentstyle=\sffamily\textit,
+  comment=[l]{\#}
 }
 \lstdefinestyle{egl}{
-	basicstyle=\ttfamily\scriptsize
+  basicstyle=\ttfamily\scriptsize
 }
 \lstdefinestyle{model}{
-	basicstyle=\ttfamily\scriptsize,
-	emph={
-		<, ?, xml, SocialNetwork, >, xmi, :, id, name, =, likes, dislikes, /,
-		people, encoding, version, xmlns
-	},
+  basicstyle=\ttfamily\scriptsize,
+  emph={
+    <, ?, xml, SocialNetwork, >, xmi, :, id, name, =, likes, dislikes, /,
+    people, encoding, version, xmlns
+  },
 }
 \lstdefinestyle{picto}{
-	basicstyle=\ttfamily\scriptsize,
-	emph={
-		<, ?, /, :, >, =,
-		nsuri, picto, format, icon, view, path, parameter, values,
-		name, format, position, source, transformation, type
-	},
+  basicstyle=\ttfamily\scriptsize,
+  emph={
+    <, ?, /, :, >, =,
+    nsuri, picto, format, icon, view, path, parameter, values,
+    name, format, position, source, transformation, type
+  },
 }
 
 \hyphenation{
-	File-Watch-er Trans-form-er View-Con-tent-Cache Pic-to-Con-trol-ler
+  File-Watch-er Trans-form-er View-Con-tent-Cache Pic-to-Con-trol-ler
 }
 
 
@@ -93,22 +93,22 @@
 % Science of Computer Programming
 % Software Track Template for Short Paper
 % Before you complete this template, a few important points to note:
-% *	This template is for the short paper associated with an original software.
+% *  This template is for the short paper associated with an original software.
 % If you are submitting an update to a software that has already been published,
 % please use the software update template.
-% *	The nature of a short paper associated with a software submission is very
+% *  The nature of a short paper associated with a software submission is very
 % different to a traditional research article. To help you write yours,
 % we have created this template. We will consider only software accompanied by
 % short papers written using this template. However, it is acceptable
 % to rename the section titles to something that is more specific to
 % your software.
-% •	In particular, remember that the goal of the paper is that it supports the submission of your software. It’s your software that will be evaluated, and the accompanying paper is only a part of the process.
-% •	We strongly advise to make this short paper not longer than 6 pages.
-% *	It is mandatory to publicly share the code and software referred to in your
+% •  In particular, remember that the goal of the paper is that it supports the submission of your software. It’s your software that will be evaluated, and the accompanying paper is only a part of the process.
+% •  We strongly advise to make this short paper not longer than 6 pages.
+% *  It is mandatory to publicly share the code and software referred to in your
 % software article. You'll find information on our software sharing criteria in
 % the Guide for Authors:
 % https://www.elsevier.com/journals/science-of-computer-programming/0167-6423/guide-for-authors
-% *	It's important to consult the Guide for Authors when preparing your
+% *  It's important to consult the Guide for Authors when preparing your
 % submission; it highlights mandatory requirements and is packed with useful advice.
 %
 % Still got questions? Email our editorial team at scico.editors@gmail.com.
@@ -149,7 +149,7 @@
 %% \address[label2]{}
 
 \author{Alfa Yohannis, Dimitris Kolovos, Antonio García-Domínguez,\\
-	Carlos Javier Fernández Candel}
+  Carlos Javier Fernández Candel}
 
 \address{University of York, United Kingdom}
 
@@ -185,11 +185,11 @@ about your current code and leave the left column untouched.
 \hline
 C1 & Current code version & 0.1.02-SCP\\
 \hline
-C2 & $https://github.com/epsilonlabs/picto\-web$ \\
+C2 & Permanent link to code/repository used for this code version & $https://github.com/epsilonlabs/picto\-web$ \\
 \hline
 C3  & Permanent link to Reproducible Capsule & \\
 \hline
-C4 & Legal Code License   & Eclipse Public License \\
+C4 & Legal Code License   & Eclipse Public License (EPL-2.0) \\
 \hline
 C5 & Code versioning system used & git \\
 \hline
@@ -227,36 +227,33 @@ C9 & Support email for questions & Online forum $https://www.eclipse.org/forums/
 
 A model is commonly considered complex when it has a large number of heterogeneous elements which are involved in non-trivial relationships \cite{boccara2010complex,klosterman2012complex}. One way to understand and communicate such models is through visualisation. However, displaying all elements and their relationships in a single graphical representation is often undesirable since it can overload users with information and make visualisations challenging to comprehend. In terms of computation, this approach is also inefficient for large models since a potentially very large and complex diagram (or similar visual representation) has to be rendered in one go. 
 Moreover, in a multi-user environment, the visualisation also has to deal with multiple, repeated requests, whether a user is refreshing a view or different users requesting the same view over the network.
-Thus, novel mechanisms are necessary to allow engineers and other stakeholders to perform contextual exploration of complex models from different viewpoints and at varying levels of detail. The visualisation also should be able to handle repeated requests from multiple users and return the requested views promptly.
+Thus, novel mechanisms are necessary to allow engineers and other stakeholders to develop and perform contextual exploration of complex models from different viewpoints and at varying levels of detail. The visualisation also should be able to handle repeated requests from multiple users and return the requested views promptly.
 
-In this paper, we present Picto Web, a web-based version of the Picto\footnote{\url{https://www.eclipse.org/epsilon/doc/picto}} \cite{dimitris2020picto} model visualisation tool which was originally implemented as an extension of the Eclipse IDE. Unlike Picto, Picto Web does not require local software installation, which makes it more suitable for a broader audience of developers and stakeholders who would benefit from access to dynamically-generated graphical views of complex software and system models.
-
-Sprotty~\cite{sprotty2022git} is an open-source diagramming framework that uses web technologies to render graphical views. 
+There has been some work related to complex model exploration. For example, Sprotty~\cite{sprotty2022git} is an open-source diagramming framework that uses web technologies to render graphical views. 
 Besides being used on the client-side for fast, scalable SVG rendering with ELK layout, it also provides a headless component that can be used for integration with the Xtext framework, extending Language Server Protocol, and computing diagram layout on the server side. Sprotty only supports node-edge diagrams and does not support rendering views conforming to different technologies, such as tables in HTML, PlantUML and Graphviz diagrams. Moreover, Sprotty does not support semantic editing on diagrams. As an alternative, the Graphical Language Server Platform (GLSP)~\cite{eclipse2022glsp} allows complete control and access over the Sprotty diagrams and can be considered if diagram editing via web browsers is required.
 
 The KIELER Lightweight Diagram (KLD) framework~\cite{schneider2013just} uses Xtend, Piccolo2D and EMF to allow on-demand model visualisation, and also the KIELER Infrastructure for Meta Layout (KIML) for defining diagram layouts. KLD uses three EMF-based models (KLayoutData, KRendering, and KGraph) for users to describe a diagram. KLD is also extensible via Java/Xtend interfaces, which should be implemented to transform and map a semantic model to KGraph and KRendering models. Similar to Sprotty, KLD only supports rendering views in node-edge diagrams. As a comparison, Picto and Picto Web support rendering views in multiple formats, such as table/form views in HTML, PlatUML and Graphviz diagrams, and views generated using JavaScript graphical libraries, e.g., Three.js.
 
-Picto \cite{dimitris2020picto} is an Eclipse plugin that uses lazy model-to-text transformation to generate transient graphical views from heterogeneous models. Figure \ref{fig:picto-eclipse} shows a screenshot of Picto within Eclipse. 
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{images/picto-eclipse.png}
+  \caption{Picto plugin for Eclipse environment.
+  }
+  \label{fig:picto-eclipse}
+\end{figure}
 
-In this example, we wish to visualise models conforming to a contrived social network metamodel from \cite{dimitris2020picto}. In particular, we use a sample model containing four people (Alice, Bob,  Charlie and Dawn) and like/dislike relationships between them. From such social network models we wish to produce one node-edge view for the entire social network, and one view for each member of the network that omits anyone they neither like nor dislike.
+Picto \cite{dimitris2020picto} is another visualisation tool, which is an Eclipse plugin, that uses lazy model-to-text transformation to generate transient graphical views from heterogeneous models. Figure \ref{fig:picto-eclipse} shows a screenshot of Picto within Eclipse. 
 
 Picto’s user interface has two main components. On its left-hand side is a tree widget that displays the titles and icons of the views (Social Network, Alice, Bob, Charlie and Dawn) that users can select from. Once a view is selected, its content is generated and rendered in an embedded web browser -- through a series of transformations -- on the right-hand side of Picto. In Figure \ref{fig:picto-eclipse}, the selected view visualises the entire model in the form of a Graphviz-based node-edge diagram. Beyond Graphviz, Picto also supports PlantUML and SVG/HTML as visualisation formats, and also features an extensible architecture that enables adopters to extend it with additional diagram-as-code formats.  
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{images/picto-eclipse.png}
-	\caption{Picto plugin for Eclipse environment.
-	}
-	\label{fig:picto-eclipse}
-\end{figure}
-
 A challenge with Picto is that it is implemented as a plugin of the Eclipse IDE, which means that for engineers to use it, they need to install Java, Eclipse and Picto and check out the models they wish to explore (as well as the respective visualisation transformations) locally. While this is not an issue for software developers who are already familiar with Eclipse, it can represent a significant barrier for other engineers and stakeholders. 
+
+In this paper, we present Picto Web\footnote{\url{https://github.com/epsilonlabs/picto-web}}, a web-based version of the Picto\footnote{\url{https://www.eclipse.org/epsilon/doc/picto}} \cite{dimitris2020picto} model visualisation tool which was originally implemented as an extension of the Eclipse IDE. Unlike Picto, Picto Web does not require local software installation, which makes it more suitable for a broader audience of developers and stakeholders who would benefit from access to dynamically-generated graphical views of complex software and system models.
 
 \section{Software description}
 %Describe the software. Provide enough detail to help the reader understand
 %its impact.
-Picto Web\footnote{\url{https://github.com/epsilonlabs/picto-web}} is a web-based version of Picto. 
-It maintains the core features of the Eclipse-based version of Picto, such as supporting the lazy generation of views, drilling-up/down tree views, multi-views, and multi-formats, but it is implemented as a multi-tenant client-server web application that can be accessed through a standard web browser to perform interactive complex model exploration. 
+Picto Web maintains the core features of the Eclipse-based version of Picto, such as supporting the lazy generation of views, drilling-up/down tree views, multi-views, and multi-formats, but it is implemented as a multi-tenant client-server web application that can be accessed through a standard web browser to perform interactive complex model exploration. 
 Picto Web monitors model files and visualisation model-to-text templates for changes and immediately propagates any updates to generated views to the viewers' web browsers, delivering a live user experience.
 
 \subsection{Software architecture}
@@ -265,109 +262,138 @@ Picto Web monitors model files and visualisation model-to-text templates for cha
 %components. If necessary, provide implementation details.
 The architecture of Picto Web is displayed in Figure \ref{fig:architecture} and consists of two parts: a server-side part that lazily runs visualisation transformations against models, and a browser-based client that displays the visualisation results. 
 
-%one that runs in the local modelling environment and the other one in the remote environment. 
-%The latter is the Picto Web client, a web client application that runs on viewers' web browsers and is used to navigate complex models. 
-%The former is the environment dedicated for modellers to construct models and consists of, minimum, a model editor, the models under construction, and a Picto Web server application. 
-
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{images/architecture.pdf}
-	\caption{The architecture of Picto Web.}
-	\label{fig:architecture}
+  \centering
+  \includegraphics[width=\linewidth]{images/architecture.pdf}
+  \caption{The architecture of Picto Web.}
+  \label{fig:architecture}
 \end{figure}
 
-The server-side part of Picto Web consists of the \texttt{File\-Watch\-er}, \texttt{Trans\-form\-er}, \texttt{View\-Con\-tent\-Cache}, \texttt{Picto\-Control\-ler}, and \texttt{Broker} components shown on the left hand side of the figure. The \texttt{File\-Watcher} component is responsible for monitoring a directory that contains the models that Picto Web needs to visualise (see Section \ref{sec:picto}). When any of the files is modified (added, deleted, or updated), \texttt{FileWatcher} detects the change and notifies the \texttt{Transformer} component, which then generates, refreshes, or invalidates the contents of the respective views\footnote{The mechanisms used to implement incremental view invalidation and re-generation upon changes in models and templates are based on the work in \cite{ogunyomi2019}, but a detailed description is beyond the scope of this paper.}.
+The server-side part of Picto Web consists of the \texttt{File\-Watch\-er}, \texttt{Trans\-form\-er}, \texttt{View\-Con\-tent\-Cache}, \texttt{Picto\-Control\-ler}, and \texttt{Broker} components shown on the left hand side of the figure. The \texttt{File\-Watcher} component is responsible for monitoring a directory that contains the models that Picto Web needs to visualise (see Section \ref{sec:transformation}). When any of the files is modified (added, deleted, or updated), \texttt{FileWatcher} detects the change and notifies the \texttt{Transformer} component, which then generates, refreshes, or invalidates the contents of the respective views\footnote{The mechanisms used to implement incremental view invalidation and re-generation upon changes in models and templates are based on the work in \cite{ogunyomi2019}, but a detailed description is beyond the scope of this paper.}.
 
-After that, Picto Web puts the generated views into a cache (\texttt{ViewContentCache}) that maps the paths of the views in the tree view to their actual contents. The cache is used to avoid wastefully re-generating views which cannot have been impacted since the last time a client requested them. Therefore, Picto Web can respond promptly to multiple, repeated requests for the same views. 
+After that, Picto Web puts the generated views into a cache (\texttt{View\-Content\-Cache}) that maps the paths of the views in the tree view to their actual contents. The cache is used to avoid wastefully re-generating views which cannot have been impacted since the last time a client requested them. Therefore, Picto Web can respond promptly to multiple, repeated requests for the same views. 
 
-Every time a client requests the content of a specific view, \texttt{Picto\-Control\-ler} receives and handles the request by retrieving the view content from \texttt{ViewContentCache} using the view's path sent in the request as the key for the map. The retrieved content is then returned to the client to display.
+Every time a client requests the content of a specific view, \texttt{Picto\-Control\-ler} receives and handles the request by retrieving the view content from \texttt{View\-Content\-Cache} using the view's path sent in the request as the key for the map. The retrieved content is then returned to the client to display.
 
 \texttt{Broker} is a component responsible for pushing updates to Picto Web clients. Every time a Picto Web client starts visualising a model, the client subscribes to the \texttt{Broker} so that it can receive further updates from the Picto Web server-side component if any of the model files are subsequently modified. After transformation, the \texttt{Transformer} publishes new content views to the \texttt{Broker}.
 
 We have packaged the Picto Web server in the form of a Docker image\footnote{\url{https://hub.docker.com/r/alfayohannisyorkacuk/picto-web}} so that users can easily deploy and test it using the following command. 
-%Users need to run the following command to launch the Docker image.
+
 \begin{verbatim}
-	docker run --rm -it -v $PWD:/workspace \
-	-p 8080:8080 picto-web
+  docker run --rm -it -v $PWD:/workspace -p 8080:8080 picto-web
 \end{verbatim}
-The Picto Web server can then be accessed using a web browser via \texttt{http://localhost:8080}. 
+
+The Picto Web server can then be accessed via \texttt{http://localhost:8080} on a web browser. 
 The \texttt{-v \$PWD:/workspace} option is used to allow the Docker image to access the transformation and model files in the current directory from its internal \texttt{/workspace} directory. 
-%It uses Docker's volume mapping feature to map a host working directory to its internal workspace.  
 This way, the internal \texttt{FileWatcher} in the Picto Web Docker image can monitor the file system for any relevant changes that should trigger view generation or invalidation.
 
 \subsection{Software functionalities}
+%Present the major functionalities of the software.
 
-Present the major functionalities of the software.
+In this example, we wish to visualise models conforming to a contrived social network metamodel from \cite{dimitris2020picto}. In particular, we use a sample model containing four people (Alice, Bob,  Charlie and Dawn) and like/dislike relationships between them. From such social network models we wish to produce one node-edge view for the entire social network, and one view for each member of the network that omits anyone they neither like nor dislike.
 
-\subsection{Sample code snippets analysis or use cases of the software (optional)}
+A social network model is a graph that contains a number of people as its nodes linked with \emph{like} and \emph{dislike} relationships. In a view, as shown in Figure \ref{fig:ui_social_network}, a person is depicted as a rectangle while the \emph{like} and \emph{dislike} relationships are presented as green and red edges respectively. This node-edge view is the visualisation of the social network model defined in Listing \ref{lst:model}.
 
-\subsubsection{Transformation}
+\begin{figure*}[h]
+  \centering
+  \hfill
+  \begin{subfigure}{0.49\textwidth}
+    \frame{\includegraphics[width=\textwidth]{images/gui-social-network.png}}
+    \caption{the overall social network}
+    \label{fig:ui_social_network}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.49\textwidth}
+    \frame{\includegraphics[width=\textwidth]{images/gui-bob.png}}
+    \caption{Bob's social network}
+    \label{fig:ui_bob}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.49\textwidth}
+    \frame{\includegraphics[width=\textwidth]{images/gui-tabular.png}}
+    \caption{an HTML table summarising the social network}
+    \label{fig:ui_tabular}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.49\textwidth}
+    \frame{\includegraphics[width=\textwidth]{images/gui-custom.png}}
+    \caption{custom Alice and Bob's social network}
+    \label{fig:ui_custom}
+  \end{subfigure}
+  \hfill
+  \caption{Picto Web client displays different views.}
+  \label{fig:ui}
+\end{figure*}
+
+Figure \ref{fig:ui} shows the user interface of Picto Web, which has two main areas. The left side is a tree view which lists the views produced from the underpinning model(s) in a hierarchical way, and the right side is a panel that displays the content of the active, selected view. In our example, when a user selects the \emph{Social Network} view on the left hand side, Picto Web displays the overall social network of Alice, Bob, Charlie, and Dawn (Figure \ref{fig:ui_social_network}). 
+
+Viewers can also drill down to display the local social network of each person through the tree view on the left. For example, Figure \ref{fig:ui_bob} displays Bob's social network. Besides being able to display view contents in SVG/HTML as in Figures \ref{fig:ui_social_network} and \ref{fig:ui_bob}, Picto Web is also able to render model views in other formats. For example, Figure \ref{fig:ui_tabular} displays a summary of the social network in the form of a HTML table. 
+
+In addition to procedurally-generated views (e.g. one view for each person in the network), developers can also define custom views, as shown in Figure \ref{fig:ui_custom}. The figure is customised only to display the social network of Alice and Bob. 
+
+%\subsection{Sample code snippets analysis or use cases of the software (optional)}
+\subsection{Transformation}
 \label{sec:transformation}
-Picto requires at least three types of files: model files (any model representation format supported by Epsilon\footnote{\url{https://eclipse.org/epsilon/doc/emc}} is also supported by Picto Web), visualisation transformation files in Epsilon's EGL template-based language (*.egl, *.egx), and Picto files (*.picto) which bind models to visualisation transformations and specify custom views (EGL, EGX, and Picto files are explained briefly later in this section). Listing \ref{lst:model} shows the XMI-based representation of the social network model of our running example. 
 
-\begin{lstlisting}[firstnumber=1,style=model,caption={A social network model as the input file for the lazy transformation. The format of the ids is simplified.},label=lst:model,float]
-	<?xml version="1.0" encoding="ASCII"?>
-	<SocialNetwork xmlns="socialnetwork" xmi:id="sn">
-	<people xmi:id="a" name="Alice" likes="b c"/>
-	<people xmi:id="b" name="Bob" likes="a" dislikes="c"/>
-	<people xmi:id="c" name="Charlie" likes="a" dislikes="d"/>
-	<people xmi:id="d" name="Dawn" likes="b"/>
-	</SocialNetwork>
-\end{lstlisting}
+Picto requires at least three types of files: model files (any model representation format supported by Epsilon\footnote{\url{https://eclipse.org/epsilon/doc/emc}} is also supported by Picto Web), visualisation transformation files in Epsilon's EGL template-based language (*.egl, *.egx), and Picto files (*.picto) which bind models to visualisation transformations and specify custom views (EGL, EGX, and Picto files are explained briefly later in this section). Listing \ref{lst:model} shows the XMI-based representation of the social network model of our running example. 
 
 The visualisation transformation consists of EGL (Epsilon Generation Language) templates ~\cite{rose2008egl} that produce individual views, and an EGX (EGL Co-Ordination Language)\footnote{\url{https://www.eclipse.org/epsilon/doc/egx}} program that specifies how the templates should be executed against different elements in the model(s). Listing \ref{lst:egx} shows an excerpt of the EGX transformation coordination program of this example. Rule \texttt{Network2Graphviz} runs the \texttt{socialnetwork2} \texttt{graphviz.egl} template of Listing \ref{lst:egl} for every \texttt{SocialNetwork} element in the source model and produces a Graphviz-based view for it. The EGL template of Listing \ref{lst:egl} defines the logic for generating the content of the view. An actual generated view in Graphviz is shown in Listing \ref{lst:output}. 
 
-\begin{lstlisting}[firstnumber=1,style=egx,caption={The Network2Graphviz EGX rule},label=lst:egx,float]
-	rule Network2Graphviz 
-	transform n : socialnetwork::SocialNetwork {
-		template : "socialnetwork2graphviz.egl"
-		parameters : Map{
-			"path" = Sequence{"Social Network"},
-			"format" = "graphviz-circo",
-			"people" = n.people
-		}
-	}
-\end{lstlisting}
-
-
-\begin{lstlisting}[firstnumber=1,style=egx,caption={An EGL template that generates a Graphviz representation of a social network.},label=lst:egl,float]
-	digraph G {
-		node[shape=rectangle, fontname=Tahoma, fontsize=10, style="filled", gradientangle="270", fillcolor="bisque:floralwhite"]
-		edge[penwidth=3, style=tapered, arrowhead=none]
-		(*[%for (p in people){%]*)
-			(*[%=p.name%]*)
-			(*[%for (l in p.likes){%]*)
-				(*[%=p.name%] -> [%=l.name%]*) [color=green]
-				(*[%}%]*)
-			(*[%for (l in p.dislikes){%]*)
-				(*[%=p.name%] -> [%=l.name%]*) [color=red]
-				(*[%}%]*)
-			(*[%}%]*)
-	}
-\end{lstlisting}
-
-\begin{lstlisting}[firstnumber=1,style=egx,caption={A view generated by the EGL template in Listing \ref{lst:egl}.},label=lst:output,float]
-	digraph G {
-		node[shape=rectangle, fontname=Tahoma, fontsize=10, style="filled", gradientangle="270", fillcolor="bisque:floralwhite"]
-		...
-		Alice
-		Alice -> Bob [color=green]
-		...
-		Dawn
-		Dawn -> Bob [color=green] 
-	}
-\end{lstlisting}
-
 Picto files bind the transformation coordination and model files to generate the contents of the target views. In Listing \ref{lst:picto}, Picto Web uses the \texttt{socialnetwork.egx} transformation coordination file that contains the rule in Listing \ref{lst:egx} to transform the social network model in Listing \ref{lst:model} into the social network and individual person views shown in Figure \ref{fig:ui}. It also includes two additional views: (1) a custom view that includes only Alice and Bob's social network (Figure \ref{fig:ui_custom}) and (2) a view that displays a Markdown readme file.
-
+\begin{lstlisting}[firstnumber=1,style=model,caption={A social network model as the input file for the lazy transformation. The format of the ids is simplified.},label=lst:model,float]
+<?xml version="1.0" encoding="ASCII"?>
+<SocialNetwork xmlns="socialnetwork" xmi:id="sn">
+  <people xmi:id="a" name="Alice" likes="b c"/>
+  <people xmi:id="b" name="Bob" likes="a" dislikes="c"/>
+  <people xmi:id="c" name="Charlie" likes="a" dislikes="d"/>
+  <people xmi:id="d" name="Dawn" likes="b"/>
+</SocialNetwork>
+\end{lstlisting}
+\begin{lstlisting}[firstnumber=1,style=egx,caption={The Network2Graphviz EGX rule},label=lst:egx,float]
+rule Network2Graphviz 
+transform n : socialnetwork::SocialNetwork {
+  template : "socialnetwork2graphviz.egl"
+  parameters : Map{
+    "path" = Sequence{"Social Network"},
+    "format" = "graphviz-circo",
+    "people" = n.people
+  }
+}
+\end{lstlisting}
+\begin{lstlisting}[firstnumber=1,style=egx,caption={An EGL template that generates a Graphviz representation of a social network.},label=lst:egl,float]
+digraph G {
+  node[shape=rectangle, fontname=Tahoma, fontsize=10, style="filled", gradientangle="270", fillcolor="bisque:floralwhite"]
+  edge[penwidth=3, style=tapered, arrowhead=none]
+  (*[%for (p in people){%]*)
+    (*[%=p.name%]*)
+    (*[%for (l in p.likes){%]*)
+      (*[%=p.name%] -> [%=l.name%]*) [color=green]
+      (*[%}%]*)
+    (*[%for (l in p.dislikes){%]*)
+      (*[%=p.name%] -> [%=l.name%]*) [color=red]
+    (*[%}%]*)
+  (*[%}%]*)
+}
+\end{lstlisting}
+\begin{lstlisting}[firstnumber=1,style=egx,caption={A view generated by the EGL template in Listing \ref{lst:egl}.},label=lst:output,float]
+digraph G {
+  node[shape=rectangle, fontname=Tahoma, fontsize=10, style="filled", gradientangle="270", fillcolor="bisque:floralwhite"]
+  ...
+  Alice
+  Alice -> Bob [color=green]
+  ...
+  Dawn
+  Dawn -> Bob [color=green] 
+}
+\end{lstlisting}
 \begin{lstlisting}[firstnumber=1,style=picto,caption={The Picto file that binds the model and the visualisation transformation.},label=lst:picto,float]
-	<?nsuri picto?>
-	<picto format="egx" transformation="picto/socialnetwork.egx">
-	<view path="Custom, Alice and Bob" icon="diagram-ff00ff" type="Persons2Graphviz">
-	<parameter name="names" values="Alice, Bob"/>
-	</view>        
-	<view path="Readme" icon="document" format="markdown" source="socialnetwork/readme.md" position="0"/>
-	</picto>
+<?nsuri picto?>
+<picto format="egx" transformation="picto/socialnetwork.egx">
+  <view path="Custom, Alice and Bob" icon="diagram-ff00ff" type="Persons2Graphviz">
+    <parameter name="names" values="Alice, Bob"/>
+  </view>        
+  <view path="Readme" icon="document" format="markdown" source="socialnetwork/readme.md" position="0"/>
+</picto>
 \end{lstlisting}
 
 \section{Illustrative examples}
@@ -377,56 +403,11 @@ Picto files bind the transformation coordination and model files to generate the
 %supplementary material or provide a link to your video in this
 %section.
 %This section can also refer to/summarize already published examples and case studies.
-
-This paper uses the same contrived social network example as in the original Picto documentation\footnote{\url{https://eclipse.org/epsilon/doc/picto}} to explain Picto Web. As a brief refresher, a social network is a graph that contains a number of people as its nodes linked with \emph{like} and \emph{dislike} relationships. In a view, as shown in Figure \ref{fig:ui_social_network}, a person is depicted as a rectangle while the \emph{like} and \emph{dislike} relationships are presented as green and red edges respectively. This node-edge view is the visualisation of the social network model defined in Listing \ref{lst:model}.
-
-\subsection{User Interface}
-\label{sec:user_interface}
-
-\begin{figure*}[h]
-	\centering
-	\hfill
-	\begin{subfigure}{0.49\textwidth}
-		\frame{\includegraphics[width=\textwidth]{images/gui-social-network.png}}
-		\caption{the overall social network}
-		\label{fig:ui_social_network}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.49\textwidth}
-		\frame{\includegraphics[width=\textwidth]{images/gui-bob.png}}
-		\caption{Bob's social network}
-		\label{fig:ui_bob}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.49\textwidth}
-		\frame{\includegraphics[width=\textwidth]{images/gui-tabular.png}}
-		\caption{an HTML table summarising the social network}
-		\label{fig:ui_tabular}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.49\textwidth}
-		\frame{\includegraphics[width=\textwidth]{images/gui-custom.png}}
-		\caption{custom Alice and Bob's social network}
-		\label{fig:ui_custom}
-	\end{subfigure}
-	\hfill
-	\caption{Picto Web client displays different views.}
-	\label{fig:ui}
-\end{figure*}
-
-Figure \ref{fig:ui} shows the user interface (UI) of Picto Web. The UI has two main areas. The left side is a tree view which lists the views produced from the underpinning model(s) in a hierarchical way, and the right side is a panel that displays the content of the active, selected view. In our example, when a user selects the \emph{Social Network} view on the left hand side, Picto Web displays the overall social network of Alice, Bob, Charlie, and Dawn (Figure \ref{fig:ui_social_network}). 
-
-Viewers can also drill down to display the local social network of each person through the tree view on the left. For example, Figure \ref{fig:ui_bob} displays Bob's social network. Besides being able to display view contents in SVG/HTML as in Figures \ref{fig:ui_social_network} and \ref{fig:ui_bob}, Picto Web is also able to render model views in other formats. For example, Figure \ref{fig:ui_tabular} displays a summary of the social network in the form of a HTML table. 
-
-In addition to procedurally-generated views (e.g. one view for each person in the network), developers can also define custom views, as shown in Figure \ref{fig:ui_custom}. The figure is customised only to display the social network of Alice and Bob. 
-
-\subsection{Control Flow}
-
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{images/sequence}
-	\caption{Requests and Updates of Picto Web's view contents.}
-	\label{fig:sequence}
+  \centering
+  \includegraphics[width=1\linewidth]{images/sequence}
+  \caption{Requests and Updates of Picto Web's view contents.}
+  \label{fig:sequence}
 \end{figure}
 
 This section demonstrates Picto Web's internal control flow, visualised in the sequence diagram of Figure \ref{fig:sequence}. Suppose that the \texttt{ViewContentCache} has been populated with view contents through an initial transformation executed when a developer (Lisa) created the social network model -- the process is not displayed in the diagram. Stakeholders Mike and Nick wish to explore Lisa's model and start running Picto Web clients. The clients subscribe to the broker provided by the Picto Web server application so that they can receive further updates on the model. 
@@ -434,39 +415,53 @@ This section demonstrates Picto Web's internal control flow, visualised in the s
 Mike is interested in knowing more about Alice's social network. Therefore, he sends a view request to Picto Web with a parameter containing Alice's view path, ``/0/1''\footnote{Simplified format}. Since the view content of the path is already available in the \texttt{View\-Content\-Cache} from the initial transformation, \texttt{Picto\-Controller} (the component that handles the request) retrieves Alice's view content from the cache and sends it back to Mike's client to be displayed.
 
 At some point, Lisa decides to rename ``Alice'' to ``Alex'' and save the change to the model file. \texttt{File\-Watcher} detects that the file has been modified and notifies the \texttt{Transformer} to generate new view contents from the modified file and update the \texttt{View\-Content\-Cache}. The \texttt{Transformer} also publishes the new content views to the \texttt{Broker} so that the subscribers, Mike and Nick, also receive the new content views and perform live updates on the view contents they currently display.
-s
+
 \section{Impact}
+Picto Web is expected to bring impact complex model exploration in model-driven engineering. Some improvements that it delivers over existing tools\cite{sprotty2022git,schneider2013just,dimitris2020picto} are: 
+\begin{enumerate}
+\item It allows users to develop and perform contextual exploration of complex models at varying levels of detail and from different viewpoints.
+\item It supports the visualisation of various models in different representation formats (e.g., HTML, Graphviz, SVG, PlantUML, etc.).
+\item It is a multi-user environment and immediately propagates any updates on models to viewers, delivering a live user experience. 
+\end{enumerate}
 
-This is the main section of the article and reviewers will weigh it
-appropriately. Please indicate:
+The capabilities are promising to bring changes to daily practices in the industry as viewers are concerned with different aspects or parts of models, 
+and they can view the current state of the models in a live manner. 
+For example, in visualising the current state of a particular software part, 
+a user prefers to view a model in state charts, 
+while another viewer favours sequence diagrams. 
+Both can immediately receive the model's current state when it is modified.
+Another research area worth exploring is how to extend the visualisation to perform model differencing to tell viewers which parts of the models have recently changed.
 
-\begin{itemize}
-  \item Any new research questions that can be pursued as a result of your
-      software.
-
-  \item In what way, and to what extent, your software improves the pursuit
-      of existing research questions.
-
-  \item Any ways in which your software has changed the daily practice of
-      its users.
-
-  \item If applicable, how widespread the use of the software is within and
-      outside the intended user group (downloads, number of users if your
-      software is a service, citable publications, and so on).
-
-  \item If applicable, how the software is being used in commercial
-      settings or how it has led to the creation of spin-off companies.
-      Please note that points 1 and 2 are best demonstrated by references
-      to citable publications. \end{itemize}
+%This is the main section of the article and reviewers will weigh it
+%appropriately. Please indicate:
+%
+%\begin{itemize}
+%  \item Any new research questions that can be pursued as a result of your
+%      software.
+%
+%  \item In what way, and to what extent, your software improves the pursuit
+%      of existing research questions.
+%
+%  \item Any ways in which your software has changed the daily practice of
+%      its users.
+%
+%  \item If applicable, how widespread the use of the software is within and
+%      outside the intended user group (downloads, number of users if your
+%      software is a service, citable publications, and so on).
+%
+%  \item If applicable, how the software is being used in commercial
+%      settings or how it has led to the creation of spin-off companies.
+%      Please note that points 1 and 2 are best demonstrated by references
+%      to citable publications. \end{itemize}
 
 \section{Conclusions}
 In this paper, we presented Picto Web, a web-based version of the Picto model visualisation tool which was originally implemented as a plug-in of the Eclipse IDE. Unlike Picto, Picto Web does not require local software installation, which makes it more suitable for a broader audience of developers and stakeholders who would benefit from access to dynamically-generated graphical views of complex software and system models. 
 
-\section{Future Plans (optional)}
+\section{Future Plans}
 %Your future plans to expand the software.
 Going forward, we plan to further improve the performance of visualisation transformations in Picto Web by establishing an element/property access trace of the visualisation transformations, to enable more fine-grained regeneration and invalidation of generated views.
 
-\section*{Acknowledgements (optional)}
+\section*{Acknowledgements}
 \label{}
 %You can use this section to acknowledge colleagues who do not qualify as a
 %co-authors but helped you in some way. Optionally thank people and institutes
@@ -475,11 +470,11 @@ The work in this paper has been funded through the HICLASS InnovateUK project (c
 
 \section*{References}
 
-If the software repository you used supplied a DOI or another Persistent
-IDentifier (PID), please add a reference for your software here. For more
-guidance on software citation, please see our guide for authors or this
-article on the essentials of software citation by FORCE 11, of which Elsevier
-is a member.
+%If the software repository you used supplied a DOI or another Persistent
+%IDentifier (PID), please add a reference for your software here. For more
+%guidance on software citation, please see our guide for authors or this
+%article on the essentials of software citation by FORCE 11, of which Elsevier
+%is a member.
 
 %% References:
 %% If you have bibdatabase file and want bibtex to generate the
